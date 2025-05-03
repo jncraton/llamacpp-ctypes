@@ -15,4 +15,4 @@ clean:
 	rm -f *.zip
 	rm -f llama.h
 	rm -f llama.py
-	rm -f libllama.so
+	rm -f *.so
