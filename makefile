@@ -1,10 +1,10 @@
-all: build llama.h
+all: build llama.py
 
 build:
 	wget https://github.com/ggml-org/llama.cpp/releases/download/b5210/llama-b5210-bin-ubuntu-x64.zip
 	unzip *.zip
 
-llama.py:
+llama.py: build llama.cpp
 	ctypesgen -llibllama.so -I llama.cpp/ggml/include -I . llama.cpp/include/llama.h -o llama.py
 
 llama.cpp:
